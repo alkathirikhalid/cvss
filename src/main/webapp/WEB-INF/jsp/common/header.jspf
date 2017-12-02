@@ -1,0 +1,23 @@
+<%-- any content can be specified here e.g.: --%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Basic Page Needs -->
+        <meta charset="utf-8">
+        <title>C.V.S.S. | ${title}</title>
+        <meta name="description" content="Institutions, Organizations, Employers and even Individuals, can now verify a certificate authenticity coming from the intended institution
+              to the intended candidate, hence preventing forgery, duplication and even outdated certificates. If you provide certification to any courses or training provided by your company or institution then
+              you are at the right place to preventing forgery, duplication and even outdated certificates in circulation.">
+        <meta name="author" content="Al-Kathiri Khalid">
+        <!-- Mobile Specific Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- FONT -->
+        <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/skeleton.css">
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="images/favicon.png">
+    </head>
+    <body>

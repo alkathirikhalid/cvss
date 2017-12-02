@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <description>Certification Verification System Service; Institutions, Organizations, Employers and even Individuals, can now verify a certificate authenticity coming from the intended institution to the intended candidate, hence preventing forgery, duplication and even outdated certificates. If you provide certification to any courses or training provided by your company or institution then you are at the right place to preventing forgery, duplication and even outdated certificates in circulation.</description>
+    <display-name>C.V.S.S.</display-name>
+    <welcome-file-list>
+        <welcome-file>home</welcome-file>
+    </welcome-file-list>
+    <context-param>
+        <description>Current Year.</description>
+        <param-name>currentYear</param-name>
+        <param-value>2018</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>com.alkathirikhalid.cvss.controller.world.HomeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DashboardServlet</servlet-name>
+        <servlet-class>com.alkathirikhalid.cvss.controller.user.DashboardServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SignUpServlet</servlet-name>
+        <servlet-class>com.alkathirikhalid.cvss.controller.world.SignUpServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SignInServlet</servlet-name>
+        <servlet-class>com.alkathirikhalid.cvss.controller.world.SignInServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DashboardServlet</servlet-name>
+        <url-pattern>/dashboard</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SignUpServlet</servlet-name>
+        <url-pattern>/signup</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SignInServlet</servlet-name>
+        <url-pattern>/signin</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            15
+        </session-timeout>
+    </session-config>
+    <jsp-config>
+        <jsp-property-group>
+            <description>Header and Footer Settings For C.V.S.S. Web App.</description>
+            <display-name>Header and Footer</display-name>
+            <url-pattern>/WEB-INF/jsp/views/*</url-pattern>
+            <include-prelude>/WEB-INF/jsp/common/header.jspf</include-prelude>
+            <include-coda>/WEB-INF/jsp/common/footer.jspf</include-coda>
+        </jsp-property-group>
+    </jsp-config>
+</web-app>

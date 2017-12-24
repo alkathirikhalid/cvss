@@ -26,6 +26,19 @@
         <servlet-name>SignInServlet</servlet-name>
         <servlet-class>com.alkathirikhalid.cvss.controller.world.SignInServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Resource</servlet-name>
+        <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>jersey.config.server.provider.packages</param-name>
+            <param-value>com.alkathirikhalid.cvss.rest</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Resource</servlet-name>
+        <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>HomeServlet</servlet-name>
         <url-pattern>/home</url-pattern>

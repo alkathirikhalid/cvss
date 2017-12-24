@@ -30,6 +30,16 @@ public class HomeServlet extends BaseServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response, String title, String message, String url) throws ServletException, IOException {
+        // TODO Display Institutions
         super.doGet(request, response, Constants.HomeServlet.TITLE, message, Constants.HomeServlet.URL);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response, String title, String message, String url) throws ServletException, IOException {
+        // TODO Handle Institution Selection
+        // Get Selected Institution From the Request
+        // Server Side Validation on Posted Institution Param
+        // Forward Request
+        super.doPost(request, response, Constants.HomeServlet.TITLE, message, Constants.HomeServlet.URL);
     }
 }

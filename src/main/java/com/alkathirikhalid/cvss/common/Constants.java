@@ -90,5 +90,9 @@ public class Constants {
          * Attribute message
          */
         public static final String MESSAGE = "message";
+        /**
+         * Attribute institutes
+         */
+        public static final String INSTITUTES = "institutes";
     }
 }

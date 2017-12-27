@@ -2,7 +2,10 @@ package com.alkathirikhalid.cvss.controller.world;
 
 import com.alkathirikhalid.cvss.common.Constants;
 import com.alkathirikhalid.cvss.controller.base.BaseServlet;
+import com.alkathirikhalid.cvss.model.data.institute.InstituteIMP;
+import com.alkathirikhalid.cvss.model.entity.InstituteEntity;
 import java.io.IOException;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -30,7 +33,9 @@ public class HomeServlet extends BaseServlet {
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response, String title, String message, String url) throws ServletException, IOException {
-        // TODO Display Institutions
+        InstituteIMP instituteIMP = new InstituteIMP();
+        List<InstituteEntity> institutes = instituteIMP.getInstitutes();
+        request.setAttribute(Constants.Attribute.INSTITUTES, institutes);
         super.doGet(request, response, Constants.HomeServlet.TITLE, message, Constants.HomeServlet.URL);
     }
 

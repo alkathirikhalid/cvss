@@ -1,3 +1,4 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!-- Primary Page Layout -->
 <div class="container">
     <div class="row">
@@ -7,7 +8,9 @@
             <form method="post" action="home">
                 <div class="row">
                     <div class="eleven columns">
-                        <select name="institution" class="u-full-width"></select
+                        <select name="institution" class="u-full-width">
+                            <c:forEach items="${institutes}" var="institute"><option><c:out value="${institute.name}" /></option></c:forEach>
+                        </select>
                     </div>
                 </div>
                 <input class="button-primary" type="submit" value="Select">

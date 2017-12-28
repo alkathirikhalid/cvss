@@ -12,39 +12,58 @@ import javax.persistence.TypedQuery;
  */
 public class CertificateIMP implements CertificateDAO {
 
+    /**
+     * Creates a Certificate
+     *
+     * @param certificate
+     * @return idCertificate of the Created Certificate
+     */
     @Override
     public int createCertificate(CertificateEntity certificate) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    /**
+     * Gets a Certificate
+     *
+     * @param idCertificate
+     * @return a Certificate
+     */
     @Override
-    public CertificateEntity getCertificate(int certificateID) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public CertificateEntity getCertificate(int idCertificate) {
+        EntityManager entityManager = EMFactorySingleton.getInstance().getEntityManagerFactory().createEntityManager();
+        CertificateEntity certificate = entityManager.find(CertificateEntity.class, idCertificate);
+        return certificate;
     }
 
+    /**
+     *
+     * @return a list of Certificates
+     */
     @Override
     public List<CertificateEntity> getCertificates() {
-        EntityManager entityManager = null;
-        List<CertificateEntity> certificates = null;
-        try {
-            entityManager = EMFactorySingleton.getInstance().getEntityManagerFactory().createEntityManager();
-            TypedQuery<CertificateEntity> query = entityManager.createQuery("SELECT c FROM CertificateEntity c", CertificateEntity.class);
-            certificates = query.getResultList();
-        } catch (Exception exception) {
-            // TODO
-        } finally {
-            if (entityManager != null) {
-                entityManager.close();
-            }
-        }
+        EntityManager entityManager = EMFactorySingleton.getInstance().getEntityManagerFactory().createEntityManager();
+        TypedQuery<CertificateEntity> query = entityManager.createQuery("SELECT c FROM CertificateEntity c", CertificateEntity.class);
+        List<CertificateEntity> certificates = query.getResultList();
+        entityManager.close();
         return certificates;
     }
 
+    /**
+     *
+     * @param certificate
+     * @return
+     */
     @Override
     public boolean updateCertificate(CertificateEntity certificate) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    /**
+     *
+     * @param certificateID
+     * @return
+     */
     @Override
     public boolean deleteCertificate(int certificateID) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

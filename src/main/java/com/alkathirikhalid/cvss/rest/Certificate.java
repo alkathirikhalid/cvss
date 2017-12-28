@@ -1,7 +1,7 @@
 package com.alkathirikhalid.cvss.rest;
 
+import com.alkathirikhalid.cvss.model.data.certificate.CertificateIMP;
 import com.alkathirikhalid.cvss.model.entity.CertificateEntity;
-import java.util.ArrayList;
 import java.util.List;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -10,54 +10,38 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 /**
+ * <p>
+ * RESTful Web Services for Certificate.</p>
  *
  * @author alkathirikhalid
  */
 @Path("certificate")
 public class Certificate {
 
+    /**
+     * Accessible .../rest/certificate
+     *
+     * @return a list of Certificates
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<CertificateEntity> getCertificates() {
-        List<CertificateEntity> certificates = new ArrayList<>();
-
-        CertificateEntity certificate = new CertificateEntity();
-        certificate.setCertificateId("0");
-        certificate.setAction("Completed");
-        certificate.setDateIssued("10/09/2015");
-        certificate.setDescription("Full Stack Dev Ops");
-        certificate.setInstitute("IAT");
-        certificate.setName("Super Hero");
-
-        certificates.add(certificate);
-
-        CertificateEntity certificate1 = new CertificateEntity();
-        certificate1.setCertificateId("1");
-        certificate1.setAction("Completed");
-        certificate1.setDateIssued("11/09/2015");
-        certificate1.setDescription("Full Stack Dev Ops");
-        certificate1.setInstitute("IAT");
-        certificate1.setName("Super Hero");
-
-        certificates.add(certificate1);
-
-        return certificates;
+        return new CertificateIMP().getCertificates();
     }
 
+    /**
+     * Accessible .../rest/certificate/id
+     *
+     * @param id
+     * @return a Certificate
+     */
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public CertificateEntity getCertificate(@PathParam("id") String id) {
-        // TODO Fetching
-        CertificateEntity certificate = new CertificateEntity();
-        certificate.setCertificateId(id);
-        certificate.setAction("Completed");
-        certificate.setDateIssued("11/09/2015");
-        certificate.setDescription("Full Stack Dev Ops");
-        certificate.setInstitute("IAT");
-        certificate.setName("Super Hero");
-        return certificate;
+    public CertificateEntity getCertificate(@PathParam("id") int id) {
+        return new CertificateIMP().getCertificate(id);
     }
+
     /*
     @POST
     @Path("/post")

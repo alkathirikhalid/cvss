@@ -33,6 +33,7 @@ public class CertificateIMP implements CertificateDAO {
     public CertificateEntity getCertificate(int idCertificate) {
         EntityManager entityManager = EMFactorySingleton.getInstance().getEntityManagerFactory().createEntityManager();
         CertificateEntity certificate = entityManager.find(CertificateEntity.class, idCertificate);
+        entityManager.close();
         return certificate;
     }
 

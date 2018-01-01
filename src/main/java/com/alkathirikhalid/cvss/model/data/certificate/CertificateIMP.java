@@ -20,7 +20,12 @@ public class CertificateIMP implements CertificateDAO {
      */
     @Override
     public int createCertificate(CertificateEntity certificate) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        EntityManager entityManager = EMFactorySingleton.getInstance().getEntityManagerFactory().createEntityManager();
+        entityManager.getTransaction().begin();
+        entityManager.persist(certificate);
+        entityManager.getTransaction().commit();
+        entityManager.close();
+        return certificate.getIdCertificate();
     }
 
     /**

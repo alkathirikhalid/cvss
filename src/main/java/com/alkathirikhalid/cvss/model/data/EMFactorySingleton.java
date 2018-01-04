@@ -30,7 +30,7 @@ public class EMFactorySingleton {
     }
 
     public void closeEmf() {
-        if (emf.isOpen() || emf != null) {
+        if (emf != null || emf.isOpen()) {
             emf.close();
         }
         emf = null;

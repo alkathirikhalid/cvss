@@ -95,4 +95,26 @@ public class Constants {
          */
         public static final String INSTITUTES = "institutes";
     }
+
+    /**
+     * Request Parameter
+     */
+    public static final class Parameter {
+
+        /**
+         * Parameter Institution
+         */
+        public static final String INSTITUTION = "institution";
+    }
+
+    /**
+     * Request Message
+     */
+    public static final class Mesage {
+
+        /**
+         * Message can not be empty
+         */
+        public static final String CAN_NOT_BE_EMPTY = " can not be empty";
+    }
 }

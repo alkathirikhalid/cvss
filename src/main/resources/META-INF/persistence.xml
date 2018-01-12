@@ -5,9 +5,9 @@
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/cvss"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
             <property name="javax.persistence.jdbc.user" value="username"/>
-            <property name="javax.persistence.jdbc.driver" value="password"/>
-            <property name="javax.persistence.jdbc.password" value="19840216_e31*USER"/>
+            <property name="javax.persistence.jdbc.password" value="password"/>
             <property name="javax.persistence.schema-generation.database.action" value="create"/>
         </properties>
     </persistence-unit>

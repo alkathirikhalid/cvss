@@ -4,6 +4,7 @@ import com.alkathirikhalid.cvss.common.Constants;
 import com.alkathirikhalid.cvss.controller.base.BaseServlet;
 import java.io.IOException;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author alkathirikhalid
  */
+@WebServlet(name = "SignInServlet", urlPatterns = {"/signin"})
 public class SignInServlet extends BaseServlet {
 
     /**

@@ -33,6 +33,21 @@ public class Constants {
     }
 
     /**
+     * SearchServlet
+     */
+    public static final class SearchServlet {
+
+        /**
+         * SearchServlet URL
+         */
+        public static final String URL = "public/search.jsp";
+        /**
+         * SearchServlet Title
+         */
+        public static final String TITLE = "Search";
+    }
+
+    /**
      * SignUpServlet
      */
     public static final class SignUpServlet {
@@ -94,6 +109,11 @@ public class Constants {
          * Attribute institutes
          */
         public static final String INSTITUTES = "institutes";
+
+        /**
+         * Attribute Institution
+         */
+        public static final String INSTITUTION = "institution";
     }
 
     /**
@@ -105,6 +125,10 @@ public class Constants {
          * Parameter Institution
          */
         public static final String INSTITUTION = "institution";
+        /**
+         * Parameter CertificateId
+         */
+        public static final String CERTIFICATE_ID = "certificateid";
     }
 
     /**
@@ -116,5 +140,16 @@ public class Constants {
          * Message can not be empty
          */
         public static final String CAN_NOT_BE_EMPTY = " can not be empty";
+    }
+
+    /**
+     * Request Message
+     */
+    public static final class Location {
+
+        /**
+         * Home
+         */
+        public static final String HOME = "home";
     }
 }

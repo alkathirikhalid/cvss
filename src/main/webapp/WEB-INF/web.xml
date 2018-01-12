@@ -11,22 +11,6 @@
         <param-value>2018</param-value>
     </context-param>
     <servlet>
-        <servlet-name>HomeServlet</servlet-name>
-        <servlet-class>com.alkathirikhalid.cvss.controller.world.HomeServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>DashboardServlet</servlet-name>
-        <servlet-class>com.alkathirikhalid.cvss.controller.user.DashboardServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>SignUpServlet</servlet-name>
-        <servlet-class>com.alkathirikhalid.cvss.controller.world.SignUpServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>SignInServlet</servlet-name>
-        <servlet-class>com.alkathirikhalid.cvss.controller.world.SignInServlet</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>Resource</servlet-name>
         <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
         <init-param>
@@ -38,22 +22,6 @@
     <servlet-mapping>
         <servlet-name>Resource</servlet-name>
         <url-pattern>/rest/*</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>HomeServlet</servlet-name>
-        <url-pattern>/home</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>DashboardServlet</servlet-name>
-        <url-pattern>/dashboard</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>SignUpServlet</servlet-name>
-        <url-pattern>/signup</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>SignInServlet</servlet-name>
-        <url-pattern>/signin</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

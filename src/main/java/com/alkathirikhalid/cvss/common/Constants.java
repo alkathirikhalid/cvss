@@ -143,7 +143,7 @@ public class Constants {
     }
 
     /**
-     * Request Message
+     * Relative Path
      */
     public static final class Location {
 
@@ -151,5 +151,16 @@ public class Constants {
          * Home
          */
         public static final String HOME = "home";
+    }
+
+    /**
+     * Common Application Constants
+     */
+    public static final class Common {
+
+        /**
+         * Home
+         */
+        public static final String CURRENT_YEAR = "currentYear";
     }
 }

@@ -48,6 +48,21 @@ public class Constants {
     }
 
     /**
+     * MemberServlet
+     */
+    public static final class Memberervlet {
+
+        /**
+         * MemberServlet URL
+         */
+        public static final String URL = "public/member.jsp";
+        /**
+         * SearchServlet Title
+         */
+        public static final String TITLE = "Member";
+    }
+
+    /**
      * SignUpServlet
      */
     public static final class SignUpServlet {
@@ -90,6 +105,21 @@ public class Constants {
          * DashboardServlet Title
          */
         public static final String TITLE = "Dashboard";
+    }
+
+    /**
+     * AccountServlet
+     */
+    public static final class AccountServlet {
+
+        /**
+         * AccountServlet URL
+         */
+        public static final String URL = "private/account.jsp";
+        /**
+         * AccountServlet Title
+         */
+        public static final String TITLE = "Account";
     }
 
     /**

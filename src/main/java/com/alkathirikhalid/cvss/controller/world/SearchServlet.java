@@ -43,7 +43,7 @@ public class SearchServlet extends BaseServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response, String title, String message, String url) throws ServletException, IOException {
         String certificatedid = request.getParameter(Constants.Parameter.CERTIFICATE_ID);
 
-        if (null == certificatedid | "".equals(certificatedid)) {
+        if (null == certificatedid || "".equals(certificatedid)) {
             // Stay on same page
             // give message
             message = Capitalize.firstLetter(Constants.Parameter.CERTIFICATE_ID.concat(Constants.Mesage.CAN_NOT_BE_EMPTY));

@@ -42,7 +42,9 @@ public class HomeServlet extends BaseServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response, String title, String message, String url) throws ServletException, IOException {
         String institution = request.getParameter(Constants.Parameter.INSTITUTION);
         if (null == institution || "".equals(institution)) {
+            title = Constants.HomeServlet.TITLE;
             message = Capitalize.firstLetter(Constants.Parameter.INSTITUTION.concat(Constants.Mesage.CAN_NOT_BE_EMPTY));
+            url = Constants.HomeServlet.URL;
         } // TODO ADD VALIDATIONS
         else {
             title = Constants.SearchServlet.TITLE;

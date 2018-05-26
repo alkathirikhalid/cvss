@@ -4,11 +4,11 @@
     <div class="row">
         <div class="eleven columns" style="margin-top: 25%">
             <h4>Select an institute to begin your search for a certificate.</h4>
-            ${message}
+            <message>${message}</message>
             <form method="post" action="home">
                 <div class="row">
                     <div class="eleven columns">
-                        <select name="institution" class="u-full-width">
+                        <select name="institution" class="u-full-width" required="true">
                             <c:forEach items="${institutes}" var="institute"><option><c:out value="${institute.name}" /></option></c:forEach>
                         </select>
                     </div>

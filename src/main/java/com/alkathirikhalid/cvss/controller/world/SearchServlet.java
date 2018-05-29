@@ -3,7 +3,6 @@ package com.alkathirikhalid.cvss.controller.world;
 import com.alkathirikhalid.cvss.common.Constants;
 import com.alkathirikhalid.cvss.controller.base.BaseServlet;
 import com.alkathirikhalid.cvss.model.entity.CertificateEntity;
-import com.alkathirikhalid.util.Capitalize;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -46,7 +45,7 @@ public class SearchServlet extends BaseServlet {
         if (null == certificatedid || "".equals(certificatedid)) {
             // Stay on same page
             // give message
-            message = Capitalize.firstLetter(Constants.Parameter.CERTIFICATE_ID.concat(Constants.Mesage.CAN_NOT_BE_EMPTY));
+            message = Constants.Parameter.CERTIFICATE_ID.concat(Constants.Mesage.CAN_NOT_BE_EMPTY);
         } // TODO ADD VALIDATIONS
         else {
         }

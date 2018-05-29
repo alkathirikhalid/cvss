@@ -5,8 +5,6 @@
  */
 package com.alkathirikhalid.cvss.common;
 
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
@@ -22,9 +20,9 @@ public class CVSSContextListener implements ServletContextListener {
     public void contextInitialized(ServletContextEvent sce) {
         // Start Up
         // initialize the current year for copyright notice
-        GregorianCalendar currentDate = new GregorianCalendar();
+/*        GregorianCalendar currentDate = new GregorianCalendar();
         int currentYear = currentDate.get(Calendar.YEAR);
-        sce.getServletContext().setAttribute(Constants.Common.CURRENT_YEAR, currentYear);
+        sce.getServletContext().setAttribute(Constants.Common.CURRENT_YEAR, currentYear);*/
     }
 
     @Override

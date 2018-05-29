@@ -1,7 +1,7 @@
 <%-- any content can be specified here e.g.: --%>
 <%@ page pageEncoding="UTF-8" %>
 <div class="eleven columns" style="margin-top: 25%">
-    <footer>&copy; 2015-${currentYear} <a href="home">C.V.S.S.</a> | <a href="privacypolicy">Privacy Policy</a> | <a href="termsandconditions">Terms and Conditions</a></footer>
+    <footer>&copy; 2015-<year>2018</year> <a href="home">C.V.S.S.</a> | <a href="privacypolicy">Privacy Policy</a> | <a href="termsandconditions">Terms and Conditions</a></footer>
 </div>
 </body>
 </html>

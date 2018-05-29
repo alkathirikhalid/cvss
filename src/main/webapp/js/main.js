@@ -1,8 +1,11 @@
 /* 
  * www.alkathirikhalid.com
  */
-function getusername(username) {
+function docPrep() {
+    document.getElementsByTagName("year")[0].innerHTML = (new Date()).getFullYear();
+}
 
+function getusername(username) {
     if (username.trim().length < 4) {
         document.getElementById("results").innerHTML = "User name";
         return;

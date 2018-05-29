@@ -186,11 +186,11 @@ public class Constants {
     /**
      * Common Application Constants
      */
-    public static final class Common {
-
-        /**
-         * Home
-         */
-        public static final String CURRENT_YEAR = "currentYear";
-    }
+//    public static final class Common {
+//
+//        /**
+//         * Home
+//         */
+//        public static final String CURRENT_YEAR = "currentYear";
+//    }
 }

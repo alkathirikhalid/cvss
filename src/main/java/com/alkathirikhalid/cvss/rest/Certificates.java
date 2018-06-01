@@ -45,6 +45,11 @@ public class Certificates {
         return new CertificateIMP().getCertificate(id);
     }
 
+    /**
+     *
+     * @param certificate
+     * @return
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public Response createCertificate(CertificateEntity certificate) {

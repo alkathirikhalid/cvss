@@ -9,13 +9,37 @@ import java.util.List;
  */
 public interface InstituteDAO {
 
+    /**
+     *
+     * @param institute
+     * @return
+     */
     int createInstitute(InstituteEntity institute);
 
+    /**
+     *
+     * @param instituteID
+     * @return
+     */
     InstituteEntity getInstitute(int instituteID);
 
+    /**
+     *
+     * @return
+     */
     List<InstituteEntity> getInstitutes();
 
+    /**
+     *
+     * @param institute
+     * @return
+     */
     boolean updateInstitute(InstituteEntity institute);
 
+    /**
+     *
+     * @param instituteID
+     * @return
+     */
     boolean deleteInstitute(int instituteID);
 }

@@ -24,7 +24,7 @@
         </session-timeout>
         <cookie-config>
             <max-age>31557600</max-age>
-            <name>UIID</name>
+            <!-- <name>UIID</name> -->
             <!-- <secure>true</secure> -->
         </cookie-config>
     </session-config>

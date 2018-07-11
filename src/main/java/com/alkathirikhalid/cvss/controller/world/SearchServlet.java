@@ -35,6 +35,7 @@ public class SearchServlet extends BaseServlet {
             certificate.setInstitute(institution);
             certificate.setCertificateId(certificatedid);
         }
+        request.setAttribute(Constants.Attribute.INSTITUTION, institution);
         super.doGet(request, response, Constants.SearchServlet.TITLE, message, Constants.SearchServlet.URL);
     }
 
